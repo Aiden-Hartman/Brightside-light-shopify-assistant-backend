@@ -30,7 +30,7 @@ def format_context_to_system_prompt(context: Dict) -> str:
     # Format chat history section
     chat_history = "Recent Chat History:\n"
     for msg in chat_messages[-5:]:  # Only include last 5 messages for context
-        chat_history += f"{msg.role}: {msg.content}\n"
+        chat_history += f"{msg['role']}: {msg['content']}\n"
     
     # Combine all sections into the final system prompt
     system_prompt = f"""You are an AI assistant for Brightside, a supplement company. 
