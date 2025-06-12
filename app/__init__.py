@@ -1,0 +1,3 @@
+"""
+Brightside API package
+""" 
