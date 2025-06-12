@@ -19,10 +19,10 @@ def format_context_to_system_prompt(context: Dict) -> str:
     # Format products section
     products_section = "Current Selected Products:\n"
     for product in products:
-        products_section += f"- {product.title} (${product.price:.2f})\n"
-        if product.description:
-            products_section += f"  Description: {product.description}\n"
-        products_section += f"  Category: {product.category}, Tier: {product.tier}\n\n"
+        products_section += f"- {product['title']} (${product['price']:.2f})\n"
+        if product.get('description'):
+            products_section += f"  Description: {product['description']}\n"
+        products_section += f"  Category: {product.get('category', 'uncategorized')}, Tier: {product.get('tier', 'unspecified')}\n\n"
     
     # Format summary section
     summary_section = f"Product Summary:\n{summary}\n\n" if summary else ""
