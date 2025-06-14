@@ -13,6 +13,7 @@ origins = [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
     "https://brightside-light-shopify-assistant.vercel.app",
+    "https://brightside-light-frontend-v2.vercel.app",
 ]
 
 app.add_middleware(
