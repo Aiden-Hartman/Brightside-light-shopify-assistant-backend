@@ -20,5 +20,6 @@ def normalize_product(raw: Dict[str, Any]) -> Product:
         description=raw.get("description", "No description available"),
         image_url=raw.get("image_url", ""),
         tier=raw.get("tier", "unspecified"),
-        category=raw.get("category", "uncategorized")
+        category=raw.get("category", "uncategorized"),
+        variant_id=raw.get("variant_id")
     )

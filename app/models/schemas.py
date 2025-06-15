@@ -9,6 +9,7 @@ class Product(BaseModel):
     image_url: Optional[str] = ""
     tier: Optional[str] = "unspecified"
     category: Optional[str] = "uncategorized"
+    variant_id: Optional[int] = None
 
 class QuizAnswer(BaseModel):
     question: str
