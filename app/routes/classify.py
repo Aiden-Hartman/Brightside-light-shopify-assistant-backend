@@ -22,7 +22,7 @@ class ClassifyResponse(BaseModel):
     status: Literal['ok', 'fallback']
     required_context: List[str]
 
-@router.post("/api/v1/classify", response_model=ClassifyResponse)
+@router.post("/classify", response_model=ClassifyResponse)
 async def classify(
     request: Request,
     classify_request: ClassifyRequest,
