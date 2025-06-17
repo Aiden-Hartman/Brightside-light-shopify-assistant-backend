@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from .routes import chat, search
+from .routes import chat, search, classify
 
 app = FastAPI(
     title="Brightside API",
@@ -28,6 +28,7 @@ app.add_middleware(
 # Include routers
 app.include_router(chat.router, prefix="/api/v1", tags=["chat"])
 app.include_router(search.router, prefix="/api/v1", tags=["search"])
+app.include_router(classify.router, prefix="/api/v1", tags=["classify"])
 
 @app.get("/health")
 async def health_check():
